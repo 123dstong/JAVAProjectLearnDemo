@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.desktop.controller.MainController">
+    <!-- 左侧导航栏 -->
+    <left>
+        <VBox styleClass="sidebar" prefWidth="200">
+            <padding>
+                <Insets top="20" right="15" bottom="20" left="15"/>
+            </padding>
+            
+            <!-- 应用标题 -->
+            <Label text="JavaFX 桌面应用" styleClass="app-title"/>
+            
+            <Separator prefWidth="170" styleClass="separator"/>
+            
+            <!-- 导航按钮 -->
+            <Button text="首页" onAction="#showHome" styleClass="nav-button" prefWidth="170"/>
+            <Button text="用户管理" onAction="#showUserManagement" styleClass="nav-button" prefWidth="170"/>
+            <Button text="数据统计" onAction="#showStatistics" styleClass="nav-button" prefWidth="170"/>
+            <Button text="系统设置" onAction="#showSettings" styleClass="nav-button" prefWidth="170"/>
+            
+            <VBox VBox.vgrow="ALWAYS"/>
+            
+            <Separator prefWidth="170" styleClass="separator"/>
+            
+            <!-- 关于按钮 -->
+            <Button text="关于" onAction="#showAbout" styleClass="nav-button" prefWidth="170"/>
+        </VBox>
+    </left>
+
+    <!-- 主内容区域 -->
+    <center>
+        <StackPane fx:id="contentArea" styleClass="content-area">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+        </StackPane>
+    </center>
+
+    <!-- 底部状态栏 -->
+    <bottom>
+        <HBox styleClass="status-bar" alignment="CENTER_LEFT" prefHeight="30">
+            <padding>
+                <Insets top="5" right="15" bottom="5" left="15"/>
+            </padding>
+            <Label text="就绪" fx:id="statusLabel"/>
+            <HBox HBox.hgrow="ALWAYS"/>
+            <Label text="JavaFX 8.0 | JDK 1.8"/>
+        </HBox>
+    </bottom>
+</BorderPane>

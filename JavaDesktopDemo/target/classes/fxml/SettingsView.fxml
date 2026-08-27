@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" spacing="20">
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+
+    <Label text="系统设置" styleClass="page-title"/>
+    <Separator/>
+
+    <!-- 设置表单 -->
+    <VBox spacing="15" styleClass="settings-form">
+        <padding>
+            <Insets top="20" right="20" bottom="20" left="20"/>
+        </padding>
+
+        <!-- 基本设置 -->
+        <Label text="基本设置" styleClass="section-title"/>
+
+        <HBox spacing="15" alignment="CENTER_LEFT">
+            <Label text="应用名称:" prefWidth="100"/>
+            <TextField text="JavaFX桌面应用示例" prefWidth="300"/>
+        </HBox>
+
+        <HBox spacing="15" alignment="CENTER_LEFT">
+            <Label text="自动保存:" prefWidth="100"/>
+            <CheckBox text="启用" selected="true"/>
+        </HBox>
+
+        <HBox spacing="15" alignment="CENTER_LEFT">
+            <Label text="保存间隔:" prefWidth="100"/>
+            <ComboBox prefWidth="150">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="1分钟"/>
+                        <String fx:value="5分钟"/>
+                        <String fx:value="10分钟"/>
+                        <String fx:value="30分钟"/>
+                    </FXCollections>
+                </items>
+            </ComboBox>
+        </HBox>
+
+        <Separator/>
+
+        <!-- 显示设置 -->
+        <Label text="显示设置" styleClass="section-title"/>
+
+        <HBox spacing="15" alignment="CENTER_LEFT">
+            <Label text="主题:" prefWidth="100"/>
+            <ComboBox prefWidth="150">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="默认主题"/>
+                        <String fx:value="深色主题"/>
+                        <String fx:value="浅色主题"/>
+                    </FXCollections>
+                </items>
+            </ComboBox>
+        </HBox>
+
+        <HBox spacing="15" alignment="CENTER_LEFT">
+            <Label text="字体大小:" prefWidth="100"/>
+            <Slider min="12" max="24" value="14" showTickLabels="true" showTickMarks="true" prefWidth="200"/>
+        </HBox>
+
+        <HBox spacing="15" alignment="CENTER_LEFT">
+            <Label text="语言:" prefWidth="100"/>
+            <ComboBox prefWidth="150">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="简体中文"/>
+                        <String fx:value="English"/>
+                        <String fx:value="日本語"/>
+                    </FXCollections>
+                </items>
+            </ComboBox>
+        </HBox>
+
+        <Separator/>
+
+        <!-- 按钮 -->
+        <HBox spacing="15" alignment="CENTER_RIGHT">
+            <Button text="恢复默认" styleClass="default-button"/>
+            <Button text="保存设置" styleClass="primary-button"/>
+        </HBox>
+    </VBox>
+</VBox>

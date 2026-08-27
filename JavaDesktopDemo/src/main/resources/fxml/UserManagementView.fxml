@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" spacing="15" fx:controller="com.example.desktop.controller.UserController">
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+
+    <!-- 标题栏 -->
+    <HBox alignment="CENTER_LEFT" spacing="15">
+        <Label text="用户管理" styleClass="page-title"/>
+        <HBox HBox.hgrow="ALWAYS"/>
+        <Button text="添加用户" onAction="#addUser" styleClass="primary-button"/>
+        <Button text="刷新" onAction="#refreshUsers" styleClass="default-button"/>
+    </HBox>
+
+    <Separator/>
+
+    <!-- 搜索栏 -->
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="搜索:" prefWidth="50"/>
+        <TextField fx:id="searchField" prefWidth="250" promptText="输入用户名搜索..."/>
+        <Button text="搜索" onAction="#searchUser" styleClass="default-button"/>
+        <Button text="清空" onAction="#clearSearch" styleClass="default-button"/>
+    </HBox>
+
+    <!-- 用户表格 -->
+    <TableView fx:id="userTable" VBox.vgrow="ALWAYS" styleClass="table-view">
+        <columns>
+            <TableColumn fx:id="idColumn" text="ID" prefWidth="80">
+                <cellValueFactory>
+                    <PropertyValueFactory property="id"/>
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="nameColumn" text="姓名" prefWidth="150">
+                <cellValueFactory>
+                    <PropertyValueFactory property="name"/>
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="emailColumn" text="邮箱" prefWidth="200">
+                <cellValueFactory>
+                    <PropertyValueFactory property="email"/>
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="phoneColumn" text="电话" prefWidth="150">
+                <cellValueFactory>
+                    <PropertyValueFactory property="phone"/>
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="ageColumn" text="年龄" prefWidth="80">
+                <cellValueFactory>
+                    <PropertyValueFactory property="age"/>
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn text="操作" prefWidth="150">
+                <cellValueFactory>
+                    <PropertyValueFactory property="actions"/>
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+    </TableView>
+
+    <!-- 底部信息 -->
+    <HBox alignment="CENTER_LEFT" spacing="10">
+        <Label fx:id="recordCount" text="共 0 条记录"/>
+        <HBox HBox.hgrow="ALWAYS"/>
+        <Button text="删除选中" onAction="#deleteSelected" styleClass="danger-button"/>
+    </HBox>
+</VBox>

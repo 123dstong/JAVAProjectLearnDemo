@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${title}">Spring Boot Web Demo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            text-align: center;
+            max-width: 600px;
+            width: 90%;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+        .message {
+            color: #666;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        .menu {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 30px;
+        }
+        .menu-item {
+            background: #667eea;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+        .menu-item:hover {
+            background: #5a6fd6;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .api-list {
+            text-align: left;
+            margin-top: 30px;
+            padding: 20px;
+            background: #f5f5f5;
+            border-radius: 5px;
+        }
+        .api-item {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .api-item:last-child {
+            border-bottom: none;
+        }
+        .api-method {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .get { background: #4CAF50; color: white; }
+        .post { background: #2196F3; color: white; }
+        .put { background: #FF9800; color: white; }
+        .delete { background: #f44336; color: white; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 th:text="${title}">Spring Boot Web Demo</h1>
+        <p class="message" th:text="${message}">欢迎学习Spring Boot Web开发!</p>
+        
+        <div class="menu">
+            <a href="/hello" class="menu-item">Hello接口</a>
+            <a href="/user/张三" class="menu-item">用户页面</a>
+            <a href="/form" class="menu-item">表单示例</a>
+            <a href="/api/users" class="menu-item" target="_blank">用户列表API</a>
+        </div>
+
+        <div class="api-list">
+            <h3 style="margin-bottom: 15px; color: #333;">API接口列表:</h3>
+            <div class="api-item">
+                <span class="api-method get">GET</span>
+                <strong>/hello</strong> - Hello接口
+            </div>
+            <div class="api-item">
+                <span class="api-method get">GET</span>
+                <strong>/user/{name}</strong> - 获取用户信息
+            </div>
+            <div class="api-item">
+                <span class="api-method get">GET</span>
+                <strong>/api/users</strong> - 获取所有用户
+            </div>
+            <div class="api-item">
+                <span class="api-method get">GET</span>
+                <strong>/api/users/{id}</strong> - 根据ID获取用户
+            </div>
+            <div class="api-item">
+                <span class="api-method post">POST</span>
+                <strong>/api/users</strong> - 创建用户
+            </div>
+            <div class="api-item">
+                <span class="api-method put">PUT</span>
+                <strong>/api/users/{id}</strong> - 更新用户
+            </div>
+            <div class="api-item">
+                <span class="api-method delete">DELETE</span>
+                <strong>/api/users/{id}</strong> - 删除用户
+            </div>
+        </div>
+    </div>
+</body>
+</html>

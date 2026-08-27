@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" spacing="20" alignment="CENTER">
+    <padding>
+        <Insets top="30" right="30" bottom="30" left="30"/>
+    </padding>
+
+    <!-- 应用图标和标题 -->
+    <VBox alignment="CENTER" spacing="10">
+        <Label text="JavaFX" styleClass="about-logo"/>
+        <Label text="桌面应用示例" styleClass="about-subtitle"/>
+    </VBox>
+
+    <Separator prefWidth="300"/>
+
+    <!-- 应用信息 -->
+    <VBox spacing="10" alignment="CENTER">
+        <Label text="版本: 1.0.0" styleClass="about-info"/>
+        <Label text="开发: Java学习项目" styleClass="about-info"/>
+        <Label text="框架: JavaFX 8.0" styleClass="about-info"/>
+        <Label text="JDK: 1.8.0_333" styleClass="about-info"/>
+    </VBox>
+
+    <Separator prefWidth="300"/>
+
+    <!-- 功能特性 -->
+    <VBox spacing="8" alignment="CENTER">
+        <Label text="功能特性" styleClass="about-section-title"/>
+        <Label text="• FXML界面布局" styleClass="about-feature"/>
+        <Label text="• CSS样式美化" styleClass="about-feature"/>
+        <Label text="• MVC架构模式" styleClass="about-feature"/>
+        <Label text="• 事件处理机制" styleClass="about-feature"/>
+        <Label text="• 表格数据展示" styleClass="about-feature"/>
+    </VBox>
+
+    <Separator prefWidth="300"/>
+
+    <!-- 链接 -->
+    <VBox spacing="8" alignment="CENTER">
+        <Hyperlink text="JavaFX官方文档" styleClass="about-link"/>
+        <Hyperlink text="OpenJFX项目" styleClass="about-link"/>
+    </VBox>
+
+    <VBox VBox.vgrow="ALWAYS"/>
+
+    <!-- 版权信息 -->
+    <Label text="© 2026 Java学习项目" styleClass="about-copyright"/>
+</VBox>

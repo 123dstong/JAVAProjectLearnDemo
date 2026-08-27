@@ -1,0 +1,39 @@
+# 服务器配置
+server:
+  port: 8088
+
+# Spring配置
+spring:
+  application:
+    name: webdemo
+  
+  # Thymeleaf配置
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: HTML
+    encoding: UTF-8
+    cache: false
+  
+  # MVC配置
+  mvc:
+    static-path-pattern: /static/**
+  
+  # JSON配置
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: UTC
+
+# 日志配置
+logging:
+  level:
+    root: INFO
+    com.example.webdemo: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+
+# 应用配置
+app:
+  name: Spring Boot Web Demo
+  version: 1.0.0
+  description: 一个简单的Spring Boot Web示例项目

@@ -1,0 +1,32 @@
+# 服务器配置
+server:
+  port: 9090
+
+# Spring配置
+spring:
+  application:
+    name: jsp-web-demo
+  
+  # JSP配置
+  mvc:
+    view:
+      prefix: /
+      suffix: .jsp
+  
+  # JSP页面配置
+  jasper:
+    enabled: true
+    suffix: .jsp
+    prefix: /
+    page-encoding: UTF-8
+  
+  # 禁用欢迎页面
+  web:
+    resources:
+      static-locations: classpath:/static/
+
+# 日志配置
+logging:
+  level:
+    root: INFO
+    com.example.web: DEBUG

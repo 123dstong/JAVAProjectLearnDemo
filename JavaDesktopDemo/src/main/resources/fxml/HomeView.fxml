@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" spacing="20">
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+
+    <!-- 欢迎标题 -->
+    <Label text="欢迎使用 JavaFX 桌面应用" styleClass="page-title"/>
+
+    <Separator/>
+
+    <!-- 功能卡片区域 -->
+    <HBox spacing="20" HBox.hgrow="ALWAYS">
+        <!-- 卡片1 -->
+        <VBox styleClass="card" HBox.hgrow="ALWAYS" spacing="10">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+            <Label text="用户管理" styleClass="card-title"/>
+            <Label text="管理用户信息，支持增删改查操作" wrapText="true" styleClass="card-content"/>
+            <Button text="进入管理" styleClass="card-button" prefWidth="120"/>
+        </VBox>
+
+        <!-- 卡片2 -->
+        <VBox styleClass="card" HBox.hgrow="ALWAYS" spacing="10">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+            <Label text="数据统计" styleClass="card-title"/>
+            <Label text="查看数据统计图表和报表" wrapText="true" styleClass="card-content"/>
+            <Button text="查看统计" styleClass="card-button" prefWidth="120"/>
+        </VBox>
+
+        <!-- 卡片3 -->
+        <VBox styleClass="card" HBox.hgrow="ALWAYS" spacing="10">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+            <Label text="系统设置" styleClass="card-title"/>
+            <Label text="配置应用程序参数和偏好" wrapText="true" styleClass="card-content"/>
+            <Button text="打开设置" styleClass="card-button" prefWidth="120"/>
+        </VBox>
+    </HBox>
+
+    <!-- 系统信息 -->
+    <VBox styleClass="info-panel" spacing="10">
+        <padding>
+            <Insets top="15" right="15" bottom="15" left="15"/>
+        </padding>
+        <Label text="系统信息" styleClass="info-title"/>
+        <Label text="应用版本: 1.0.0"/>
+        <Label text="JavaFX版本: 8.0"/>
+        <Label text="JDK版本: 1.8.0_333"/>
+        <Label text="运行模式: 桌面应用程序"/>
+    </VBox>
+</VBox>

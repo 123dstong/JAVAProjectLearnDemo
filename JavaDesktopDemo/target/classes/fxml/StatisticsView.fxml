@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" spacing="20">
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+
+    <Label text="数据统计" styleClass="page-title"/>
+    <Separator/>
+
+    <!-- 统计卡片 -->
+    <HBox spacing="20">
+        <!-- 统计卡片1 -->
+        <VBox styleClass="stat-card" HBox.hgrow="ALWAYS" spacing="10">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+            <Label text="总用户数" styleClass="stat-label"/>
+            <Label text="1,234" styleClass="stat-value"/>
+            <Label text="较上月 +12%" styleClass="stat-change positive"/>
+        </VBox>
+
+        <!-- 统计卡片2 -->
+        <VBox styleClass="stat-card" HBox.hgrow="ALWAYS" spacing="10">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+            <Label text="活跃用户" styleClass="stat-label"/>
+            <Label text="856" styleClass="stat-value"/>
+            <Label text="较上月 +5%" styleClass="stat-change positive"/>
+        </VBox>
+
+        <!-- 统计卡片3 -->
+        <VBox styleClass="stat-card" HBox.hgrow="ALWAYS" spacing="10">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+            <Label text="今日访问" styleClass="stat-label"/>
+            <Label text="3,456" styleClass="stat-value"/>
+            <Label text="较昨日 -3%" styleClass="stat-change negative"/>
+        </VBox>
+
+        <!-- 统计卡片4 -->
+        <VBox styleClass="stat-card" HBox.hgrow="ALWAYS" spacing="10">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+            <Label text="系统运行时间" styleClass="stat-label"/>
+            <Label text="45天" styleClass="stat-value"/>
+            <Label text="正常运行中" styleClass="stat-change positive"/>
+        </VBox>
+    </HBox>
+
+    <!-- 图表区域 -->
+    <HBox spacing="20" VBox.vgrow="ALWAYS">
+        <!-- 左侧图表 -->
+        <VBox styleClass="chart-panel" HBox.hgrow="ALWAYS" spacing="10">
+            <padding>
+                <Insets top="15" right="15" bottom="15" left="15"/>
+            </padding>
+            <Label text="用户增长趋势" styleClass="chart-title"/>
+            <VBox VBox.vgrow="ALWAYS" styleClass="chart-placeholder">
+                <padding>
+                    <Insets top="40" right="40" bottom="40" left="40"/>
+                </padding>
+                <Label text="[ 图表区域 - 可集成 JFreeChart 或 JavaFX Charts ]" styleClass="chart-placeholder-text"/>
+            </VBox>
+        </VBox>
+
+        <!-- 右侧图表 -->
+        <VBox styleClass="chart-panel" HBox.hgrow="ALWAYS" spacing="10">
+            <padding>
+                <Insets top="15" right="15" bottom="15" left="15"/>
+            </padding>
+            <Label text="访问来源分布" styleClass="chart-title"/>
+            <VBox VBox.vgrow="ALWAYS" styleClass="chart-placeholder">
+                <padding>
+                    <Insets top="40" right="40" bottom="40" left="40"/>
+                </padding>
+                <Label text="[ 图表区域 - 可集成 JFreeChart 或 JavaFX Charts ]" styleClass="chart-placeholder-text"/>
+            </VBox>
+        </VBox>
+    </HBox>
+</VBox>
